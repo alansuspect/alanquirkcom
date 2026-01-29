@@ -1,0 +1,231 @@
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/font/Manrope-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope Light';
+    src: url('/font/Manrope-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope Bold';
+    src: url('/font/Manrope-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+  /* Font families: Webfont with fallbacks to https://modernfontstacks.com/ */
+  --font-default: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+  --font-display-regular: "Manrope Light", source-sans-pro, sans-serif;
+  --font-display-bold: "Manrope Bold", var(--font-default);
+
+  --color-primary: #0e1114;
+  --color-secondary: #202d36;
+  /* --color-tertiary: #1E3E62; */
+  --color-accent: #7797ad;
+  --color-light: #c4ced4;
+}
+
+
+[data-theme=dark] {
+    --surface-back: var(--color-primary);
+    --text-colour-1: var(--color-light);
+    --heading-colour-1: var(--color-light);
+    --heading-colour-2: var(--color-accent);
+  }
+
+
+/* https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+
+body {
+    font-family: var(--font-default);
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--surface-back);
+    font-size: var(--step--1);
+    color: var(--text-colour-1);    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display-regular);
+    color: var(--heading-colour-2);
+    line-height: 1.4em;
+    letter-spacing: 2px;    
+    margin: 0;
+    padding: 0;
+}
+
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+    font-family: var(--font-display-bold);
+    font-weight: bold;
+}
+
+h1 {
+    font-size: var(--step-4);
+}
+h2 {
+    font-size: var(--step-3);
+}
+h3 {
+    font-size: var(--step-2);   
+}
+h4 {
+    font-size: var(--step-1);   
+}
+h5 {
+    font-size: var(--step-0);
+}
+h6 {
+    font-size: var(--step--1);
+}
+
+
+.site-header {
+    padding-block-start: var(--grid-gutter);
+
+    & .u-container {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+
+        & .logo {
+            display: flex;
+            align-items: flex-end;
+            gap: var(--space-xs-s);
+            
+            & svg path {
+                fill: var(--color-accent);
+            }
+
+            & h1 {
+                font-size: var(--step--1);
+                margin: 0;
+                padding: 0;
+                text-transform: uppercase;
+                color: var(--heading-colour-2);
+            }
+
+        }
+
+        & ul {
+            display: flex;
+            flex-flow: row;
+            list-style: none;
+            padding: 0;
+        }
+
+    }
+}
+
+
+.home-content {
+    display: grid;
+    gap: var(--space-l-xl);
+    padding-block: var(--grid-gutter);
+    grid-template-rows: repeat(3, auto);
+
+
+    & ul.stack-logos {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: var(--grid-gutter);
+        border: 1px solid var(--color-secondary);
+        padding: var(--space-s-m);
+
+        & svg {
+            width: 3rem;
+            fill: var(--color-light);
+        }
+    }    
+}

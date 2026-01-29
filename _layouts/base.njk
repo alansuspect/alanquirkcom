@@ -1,0 +1,44 @@
+---
+title: Alan Quirk Design
+---
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    <link rel="preload" href="/font/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/font/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/font/Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+  </head>
+  <body>
+    <header class="site-header">
+        <div class="u-container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="91px" height="81px" viewBox="0 0 91 81">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <path d="M38.453125,57.2695312 L39.8691406,53.7539062 L51.8808594,53.7539062 L53.296875,57.2695312 L38.453125,57.2695312 Z M35.71875,64.3007812 L37.0859375,60.7851562 L54.6152344,60.7851562 L56.1289062,64.3007812 L35.71875,64.3007812 Z M32.984375,71.3320312 L34.3515625,67.8164062 L57.3984375,67.8164062 L58.8632812,71.3320312 L32.984375,71.3320312 Z M4.41992188,81 L0.611328125,81 L32.59375,0.140625 L36.4023438,0.140625 L68.3359375,81 L64.5761719,81 L34.4980469,4.87695312 L4.41992188,81 Z M34.9375,13.2265625 L36.9394531,17.71875 L11.9394531,81 L8.1796875,81 L34.9375,13.2265625 Z M38.84375,22.5039062 L40.6992188,27.3378906 L19.5566406,81 L15.7480469,81 L38.84375,22.5039062 Z M42.5546875,32.171875 L44.4101562,37.1035156 L27.0761719,81 L23.3164062,81 L42.5546875,32.171875 Z M91.0410156,81 L87.2324219,81 L55.2988281,0.140625 L59.0585938,0.140625 L91.0410156,81 Z M51.4902344,0.140625 L83.4726562,81 L79.7128906,81 L47.7304688,0.140625 L51.4902344,0.140625 Z M43.921875,0.140625 L75.9042969,81 L72.0957031,81 L40.1621094,0.140625 L43.921875,0.140625 Z" id="A" fill=""></path>
+                    </g>
+                </svg>
+                <h1>{{ title }}</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>    
+        {{ content | safe }}
+    </main>
+    <footer>
+
+    </footer>    
+  </body>
+</html>
