@@ -1,47 +1,71 @@
 
+
 @font-face {
-    font-family: 'Manrope';
-    src: url('/font/Manrope-Regular.woff2') format('woff2');
+    font-family: 'Public Sans Light';
+    src: url('/font/public-sans-300-normal.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Manrope Light';
-    src: url('/font/Manrope-Light.woff2') format('woff2');
-    font-weight: 300;
+    font-family: 'Public Sans Bold';
+    src: url('/font/public-sans-700-normal.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Work Sans Light';
+    src: url('/font/work-sans-300-normal.woff2') format('woff2');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Manrope Bold';
-    src: url('/font/Manrope-Bold.woff2') format('woff2');
-    font-weight: bold;
+    font-family: 'Work Sans Medium';
+    src: url('/font/work-sans-500-normal.woff2') format('woff2');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Work Sans Bold';
+    src: url('/font/work-sans-700-normal.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 :root {
   /* Font families: Webfont with fallbacks to https://modernfontstacks.com/ */
-  --font-default: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
-  --font-display-regular: "Manrope Light", source-sans-pro, sans-serif;
-  --font-display-bold: "Manrope Bold", var(--font-default);
+  --font-default: "Public Sans Light", Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+  --font-default-bold: "Public Sans Bold", Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;  
+  --font-display-regular: "Work Sans Light", source-sans-pro, sans-serif;
+  --font-display-medium: "Work Sans Medium", var(--font-default);
 
   --color-primary: #0e1114;
   --color-secondary: #202d36;
-  /* --color-tertiary: #1E3E62; */
+  --color-tertiary: #ffffff;
   --color-accent: #7797ad;
   --color-light: #c4ced4;
+  
 }
 
 
 [data-theme=dark] {
     --surface-back: var(--color-primary);
     --text-colour-1: var(--color-light);
+    --text-colour-2: var(--color-tertiary);
+    --text-colour-3: var(--color-primary);
     --heading-colour-1: var(--color-light);
-    --heading-colour-2: var(--color-accent);
+    --heading-colour-2: var(--color-tertiary);
   }
 
 
@@ -131,12 +155,17 @@ body {
     box-sizing: border-box;
     background: var(--surface-back);
     font-size: var(--step--1);
-    color: var(--text-colour-1);    
+    color: var(--text-colour-2);    
+}
+
+strong {
+    font-family: var(--font-default-bold);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display-regular);
-    color: var(--heading-colour-2);
+    font-weight: normal;
+    color: var(--heading-colour-1);
     line-height: 1.4em;
     letter-spacing: 2px;    
     margin: 0;
@@ -144,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
-    font-family: var(--font-display-bold);
+    font-family: var(--font-display-medium);
     font-weight: bold;
 }
 
@@ -167,6 +196,27 @@ h6 {
     font-size: var(--step--1);
 }
 
+button {
+    display: flex;
+    padding: 0;
+    border: 0;
+    border-radius: 0.225rem;    
+}
+
+button a.btn {
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--text-colour-3);
+    font-family: var(--font-default-bold);
+    transition: 0.2s;
+}
+
+button a.btn:hover {
+    color: var(--text-colour-1);
+    background-color: var(--color-secondary);
+}
+
+
 
 .site-header {
     padding-block-start: var(--grid-gutter);
@@ -175,7 +225,7 @@ h6 {
         display: flex;
         flex-flow: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
 
         & .logo {
             display: flex;
@@ -183,15 +233,17 @@ h6 {
             gap: var(--space-xs-s);
             
             & svg path {
-                fill: var(--color-accent);
+                fill: var(--color-light);
             }
 
             & h1 {
                 font-size: var(--step--1);
+                font-family: var(--font-default);
+                line-height: 1;
                 margin: 0;
                 padding: 0;
                 text-transform: uppercase;
-                color: var(--heading-colour-2);
+                color: var(--heading-colour-1);
             }
 
         }
@@ -201,6 +253,7 @@ h6 {
             flex-flow: row;
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
     }
@@ -212,6 +265,28 @@ h6 {
     gap: var(--space-l-xl);
     padding-block: var(--grid-gutter);
     grid-template-rows: repeat(3, auto);
+
+    & .hero-section {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 1.6rem;
+        min-height: 24rem;
+        max-width: 75%;
+
+        & h1 {
+            font-size: var(--step-4);
+            font-family: var(--font-display-medium);
+            color: var(--heading-colour-2);
+            line-height: 1.2;
+            letter-spacing: 0;
+        }
+        & h2 {
+            font-size: var(--step-0);
+            letter-spacing: 1px;
+        }        
+    }
 
 
     & ul.stack-logos {
