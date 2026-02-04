@@ -3,16 +3,81 @@ layout: base.njk
 ---
 
 <section class="u-container home-content">
-    <div class="hero-section">
+    <section class="hero-section">
         <div class="hero-titles">
             <h1>Shopify, WordPress & Static Site Development</h1>
             <h2>for Small Businesses, Agencies & E-commerce</h2>
         </div>
         <p>I'm Alan Quirk, a freelance web developer based in Australia working with small businesses, agencies and online stores worldwide. I build clean, fast websites and help keep them running smoothly.</p>
-        <button>
-            <a href="#Contact" class="btn">Get in Touch</a>
-        </button>
-    </div>
+        <a href="#Contact" class="btn">Get in touch</a>
+    </section>
+
+    <section class="home-do">
+        <h2>What I do</h2>
+        <p>I work with Shopify, WordPress (including Elementor), and Eleventy to build and maintain websites that work well and look good.</p>
+        <div class="services">
+            <div class="service">
+                <h3>New Builds</h3>
+                <p>Clean code, mobile-responsive sites built to your specifications. I'm particularly focused on Eleventy projects for clients who value fast-loading, streamlined websites.</p>
+            </div>
+            <div class="service">
+                <h3>Redesigns & Rebuilds</h3>
+                <p>Refresh an outdated site or migrate to a better platform while keeping what works and improving what doesn't.</p>
+            </div>
+            <div class="service">
+                <h3>Fixes & Ongoing Support</h3>
+                <p>Bug fixes, updates, tweaks and improvements. Available for one-off tasks or ongoing retainer work.</p>
+            </div>
+        </div>
+        <p>I come from a design background, so I understand how a site should look and function from the user's perspective - not just the technical side.</p>
+        <p>I write quality HTML and CSS, keep things clean and maintainable, and communicate clearly throughout the project. No marketing jargon, no overpromising. Just reliable work delivered on time.</p>
+        <p>I'm responsive, easy to work with, and based in Australia working with clients around the world. Whether it's a one-off build or ongoing support, I'll make sure you know exactly what's happening and when.</p>
+    </section>
+
+    <section class="home-work">
+        <h2>Recent Work</h2>
+        <p>Here are a few recent projects I've worked on.</p>
+        <div class="project-grid">
+            {% if collections.projects | length == 0 %}
+                <p>No projects found.</p>
+            {% else %}  
+                {% for project in collections.projects | slice(0,4) %}
+                    <article class="project-card">
+                        <a href="{{ project.url }}">
+                            <div class="project-image" style="background-image: url('{{ project.data.thumbnail }}');"></div>
+                            <div class="project-info">
+                                <h3>{{ project.data.title }}</h3>
+                                <p>{{ project.data.description }}</p>
+                            </div>
+                        </a>
+                    </article>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+
+    <section id="Contact" class="home-contact">
+        <h2>Get in touch</h2>
+        <p>Have a project in mind or need help with an existing site? Send me a message and I'll get back to you promptly.</p>
+        <form action="/contact" method="POST" class="contact-form">
+            <ul>
+                <li>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>                    
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>                    
+                </li>
+                <li>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>                    
+                </li>
+                <button type="submit" class="btn">Send Message</button>
+            </ul>
+        </form>
+        
+    </section>
 
     <ul class="stack-logos" style="display: none;">
         <li>
