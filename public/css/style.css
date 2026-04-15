@@ -1,11 +1,11 @@
 :root {
   /* Font families: Webfont with fallbacks to https://modernfontstacks.com/ */
   --font-default:
-    ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa, Manjari,
+    ui-rounded, "Hiragino Maru Gothic ProN", Comfortaa, Manjari,
     "Arial Rounded MT", "Arial Rounded MT Bold", Calibri, source-sans-pro,
     sans-serif;
   --font-display-regular:
-    ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa, Manjari,
+    ui-rounded, "Hiragino Maru Gothic ProN", Comfortaa, Manjari,
     "Arial Rounded MT", "Arial Rounded MT Bold", Calibri, source-sans-pro,
     sans-serif;
 
@@ -53,6 +53,7 @@ figure,
 blockquote,
 dl,
 dd {
+margin-block-start: 0;
   margin-block-end: 0;
 }
 
@@ -188,6 +189,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  transition: 0.2s;
 }
 img {
   max-width: 100%;
@@ -251,7 +253,7 @@ nav .container {
 .hero .container {
     display: flex;
     flex-flow: column;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .hero h1 {
@@ -342,24 +344,50 @@ nav .container {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
-.portfolio-thumb {
-  width: 100%;
-  aspect-ratio: 4/3;
-  background: #f4f4f4;
-  margin-bottom: 0.75rem;
+.portfolio-item {
+    display: flex;
+    flex-flow: column;
+    gap: 1.4rem;
+}
+
+.portfolio-item img {
+    border: 1px solid var(--color-secondary);
 }
 
 .portfolio-item h4 {
   font-size: 1rem;
-  margin-bottom: 0.25rem;
 }
+
+.portfolio-details {
+    display: flex;
+    flex-flow: column;
+    gap: 0.25rem;
+}
+
 .portfolio-item p {
+    margin-block-start: 0;
   font-size: 0.85rem;
   color: var(--color-alt-low);
+}
+
+.portfolio-item p.tags {
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+}
+
+.portfolio-item a {
+      font-size: 0.85rem;
+    color: var(--color-primary);
+        margin: 0.5rem 0;
+}
+
+.portfolio-item a:hover {
+    color: var(--color-alt-mid);
 }
 
 /* CONTACT */
@@ -442,9 +470,26 @@ footer .container {
   color: var(--color-alt-mid);
 }
 
-footer nav {
+footer ul.nav {
   display: flex;
   gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul.nav li a {
+    display: flex;;
+}
+
+footer svg {
+	fill: var(--color-primary);
+	width: 1rem;
+	transition: 0.2s;
+}
+
+footer svg:hover {
+	fill: var(--color-alt-mid);
 }
 
 button#theme-toggle {
@@ -454,13 +499,16 @@ button#theme-toggle {
     width: 2rem;
     height: 2rem;
     display: flex;
-    place-items: center;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     transition: 0.2s;
 }
 
 button#theme-toggle svg {
     color: var(--color-primary);
+    width: 0.8rem;
+    height: 0.8rem;
 }
 
 button#theme-toggle:hover {
@@ -493,6 +541,18 @@ button#theme-toggle:hover {
 }
 
 @media screen and (max-width: 600px) {
+
+    nav .container {
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    nav .container .nav-links {
+        align-self: auto;
+        font-size: var(--step--2);
+    }
+
     .services-grid,
       .portfolio-grid  {
         grid-template-columns: 1fr;

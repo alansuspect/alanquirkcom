@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Glide Magazine",
+    "description": "A faster, modern rebuild for this magazine website featuring breaking music news and reviews, curated latest must-hear releases and intimate interviews.",
+    "url": "https://glidemagazine.com",
+    "tags": ["Wordpress", "Eleventy", "Design", "Hosting"],
+    "images": {
+      "desktop": "/media/glidemagazine_com__149a8713851a.webp",
+      "mobile": "/media/glidemagazine_com__149a8713851a.webp"
+    }
+  },
+  {
+    "title": "Koira Kaakao",
+    "description": "Koira Kaakao offers a unique hot chocolate experience that warms the heart and soul, inspired by the rich traditions of Finnish cocoa going back to the 1800s.",
+    "url": "https://koirakaakao.com",
+    "tags": ["Shopify", "Design", "Theme Customisation"],
+    "images": {
+      "desktop": "/media/koirakaakao_com__e37f1bfd092b.webp",
+      "mobile": "/media/koirakaakao_com__199816b8053d.webp"
+    }
+  },
+  {
+    "title": "FLCK",
+    "description": "FLCK offers a range of drinks that give you focus, taste great and are actually good for your long term brain health.",
+    "url": "https://flck.com",
+    "tags": ["Shopify", "Theme Customisation"],
+    "images": {
+      "desktop": "/media/flck-desktop.webp",
+      "mobile": "/media/flck-mobile.webp"
+    }
+  }  
+]
