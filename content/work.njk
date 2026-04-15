@@ -1,0 +1,22 @@
+---
+layout: base.njk
+permalink: "/work/"
+---
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <h2>Latest work</h2>
+    <div class="portfolio-grid">
+      {% for item in portfolio %}
+      <div class="portfolio-item">
+          <img src="{{ item.images.desktop }}" alt="{{ item.title }}">
+          <div class="portfolio-details">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+            <a href="{{ item.url }}">{{ item.url }}</a>
+            <p class="tags">{{ item.tags | join(" - ") }}</p>            
+          </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

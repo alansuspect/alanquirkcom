@@ -11,6 +11,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "@11ty/eleventy": "4.0.0-alpha.7"
+    "@11ty/eleventy": "4.0.0-alpha.7",
+    "luxon": "^3.7.2"
   }
 }

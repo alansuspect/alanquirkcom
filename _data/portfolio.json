@@ -28,5 +28,145 @@
       "desktop": "/media/flck-desktop.webp",
       "mobile": "/media/flck-mobile.webp"
     }
-  }  
+  },
+ {
+    "title": "Studio Shand",
+    "description": "Studio Shand is an Australian architecture, interiors & object design studio.",
+    "url": "https://studioshand.co/",
+    "tags": ["Wordpress", "Elementor"],
+    "images": {
+      "desktop": "/media/studioshand_co_project_architecture__42afa7ae9a93.webp",
+      "mobile": "/media/studioshand_co_project_architecture__6be2a7a4bbcf.webp"
+    }
+  },   
+  {
+    "title": "Beth Ratchford",
+    "description": "Providing the support and resources necessary for those seeking true healing, as well as for clinicians who want to help their clients take the next step in recovery.",
+    "url": "https://bethratchford.com",
+    "tags": ["Wordpress", "Elementor"],
+    "images": {
+      "desktop": "/media/bethratchford_com__584263671dfc.webp",
+      "mobile": "/media/bethratchford_com__97f113f7c2fd.webp"
+    }
+  },    
+  {
+    "title": "500.shop",
+    "description": "Official 500 Casino merchandise.",
+    "url": "https://500.shop/",
+    "tags": ["Shopify", "Theme Customisation"],
+    "images": {
+      "desktop": "/media/500_shop__b8053d1d6c85.webp",
+      "mobile": "/media/500_shop__5a8b4c80a6b6.webp"
+    }
+  },
+  {
+    "title": "Apolis",
+    "description": "Creating market bags designed for beautiful moments and lasting global impact.",
+    "url": "https://apolisglobal.com/",
+    "tags": ["Shopify", "Theme Customisation"],
+    "images": {
+      "desktop": "/media/apolisglobal_com__578f41c11061.webp",
+      "mobile": "/media/apolisglobal_com__e24e37a8a11a.webp"
+    }
+  },
+ {
+    "title": "Adam Berry Illustration",
+    "description": "Designer and illustrator from the Isle of Man",
+    "url": "https://adamberry.net/",
+    "tags": ["Wordpress", "Elementor", "WooCommerce"],
+    "images": {
+      "desktop": "/media/adamberry_net__458c1859a3c3.webp",
+      "mobile": "/media/adamberry_net__b55fe0f78d6d.webp"
+    }
+  },     
+  {
+    "title": "Necesse The Label",
+    "description": "Necesse creates garments conceived as narrative objects, crafted from pure silk and designed for those who believe that true luxury lies in permanence, intellect, and intention.",
+    "url": "https://necessethelabel.com/",
+    "tags": ["Shopify", "Theme Customisation"],
+    "images": {
+      "desktop": "/media/necessethelabel_com__ee44a7f07f87.webp",
+      "mobile": "/media/necessethelabel_com__ee44a7f07f87.webp"
+    }
+  },
+ {
+    "title": "Soulmate Skin",
+    "description": "A luxury esthetics studio in Woodland, California, created to help you feel confident, relaxed, and radiant at every age.",
+    "url": "https://soulmateskin.com",
+    "tags": ["Wordpress", "Elementor", "WooCommerce"],
+    "images": {
+      "desktop": "/media/soulmateskin_com__ac41c6169683.webp",
+      "mobile": "/media/soulmateskin_com__bc664c4a3438.webp"
+    }
+  },     
+  {
+    "title": "Desert Poppy Paper Co.",
+    "description": "A wallpaper company featuring unique designs.",
+    "url": "https://www.desertpoppypaper.com/",
+    "tags": ["Shopify", "Theme Customisation"],
+    "images": {
+      "desktop": "/media/www_desertpoppypaper_com__65bac03a297c.webp",
+      "mobile": "/media/www_desertpoppypaper_com__7c3687e87462.webp"
+    }
+  },
+  {
+    "title": "Coloring Rugs",
+    "description": "Washable coloring mats - grab your washable markers & have hours of endless fun.",
+    "url": "https://www.coloringrugs.com/",
+    "tags": ["Shopify", "Theme Customisation"],
+    "images": {
+      "desktop": "/media/www_coloringrugs_com__4e3b23d0b5a8.webp",
+      "mobile": "/media/www_coloringrugs_com__23d0b5a85c88.webp"
+    }
+  },
+  {
+    "title": "Ginza Six",
+    "description": "Create plush stain-resistant classic rugs & washable rugs that elevate living spaces and practicality for everyday life.",
+    "url": "https://www.ginzasix.com/",
+    "tags": ["Shopify", "Theme Customisation"],
+    "images": {
+      "desktop": "/media/www_ginzasix_com__ad1d70a9279b.webp",
+      "mobile": "/media/www_ginzasix_com__d2814d0c4c57.webp"
+    }
+  },
+  {
+    "title": "Softy Wipes",
+    "description": "Extra large, silky smooth cloth wipes that are easy on little faces and hands yet brutal on the yuckies.",
+    "url": "https://www.softy.com",
+    "tags": ["Shopify", "Theme Customisation"],
+    "images": {
+      "desktop": "/media/www_softy_com__468aff9267fd.webp",
+      "mobile": "/media/www_softy_com__b82623101eb4.webp"
+    }
+  },
+  {
+    "title": "True Self Journey",
+    "description": "True Self Journey offers an invitation to help you engage in your personal growth with intention, helping you discover and experience your authentic True Self.",
+    "url": "https://trueselfjourney.com/",
+    "tags": ["Shopify", "Theme Customisation"],
+    "images": {
+      "desktop": "/media/trueselfjourney_com__6d0621db3864.webp",
+      "mobile": "/media/trueselfjourney_com__b5252443e3c2.webp"
+    }
+  },
+ {
+    "title": "teachIM.org",
+    "description": "Ready-to-go Teaching Materials for Clinical Medicine.",
+    "url": "https://teachim.org",
+    "tags": ["Wordpress", "Elementor"],
+    "images": {
+      "desktop": "/media/teachim_org__03bc61e8cec0.webp",
+      "mobile": "/media/teachim_org__bf67f68a0b55.webp"
+    }
+  },     
+  {
+    "title": "Franklin's Popcorn",
+    "description": "Everything you need to make popcorn that looks, smells, and tastes even better than at the movies",
+    "url": "https://franklinspopcorn.com",
+    "tags": ["Shopify", "Theme Customisation"],
+    "images": {
+      "desktop": "/media/franklinspopcorn_com__9c3a08c42d88.webp",
+      "mobile": "/media/franklinspopcorn_com__08c42d888680.webp"
+    }
+  }
 ]
