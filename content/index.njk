@@ -52,7 +52,10 @@ layout: base.njk
 </section>
 <section class="portfolio" id="portfolio">
   <div class="container">
-    <h2>Latest work</h2>
+    <div class="portfolio-titles">
+      <h2>Latest work</h2>
+      <a href="/work">View all</a>
+    </div>
     <div class="portfolio-grid">
         {% for item in portfolio | limit(3) %}
             <div class="portfolio-item">

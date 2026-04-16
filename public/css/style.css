@@ -337,9 +337,20 @@ nav .container {
   border-bottom: 1px solid var(--color-secondary);
 }
 
+.portfolio .container {
+  display: flex;
+  flex-flow: column;
+  gap: 2.5rem;
+}
+
+.portfolio-titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 .portfolio h2 {
   font-size: 1.75rem;
-  margin-bottom: 2.5rem;
 }
 
 .portfolio-grid {
