@@ -8,8 +8,8 @@ layout: base.njk
         <p>I'm Alan Quirk, a freelance web developer based in Australia, designing and building for small businesses, agencies and online stores around the world. I also provide after-launch support for updates and ongoing retainer work.</p>
     </div>
     <div class="hero-actions">
-      <a href="/work" class="btn btn-filled">View my work</a>
-      <a href="#contact" class="btn">Get in touch</a>
+      <a href="/work" name="View examples of my work" aria-label="View examples of my work" class="btn btn-filled">View my work</a>
+      <a href="#contact" name="Contact me" aria-label="Contact me" class="btn">Get in touch</a>
     </div>
   </div>
 </section>
@@ -74,16 +74,16 @@ layout: base.njk
   <div class="container">
     <div class="section-title">
         <h2>Latest work</h2>
-        <a href="/work">View more</a>
+        <a href="/work" name="View more of my work" aria-label="View more of my work">View more</a>
     </div>    
     <div class="portfolio-grid">
         {% for item in portfolio | limit(3) %}
             <div class="portfolio-item">
                 <img src="{{ item.images.desktop }}" alt="{{ item.title }}" width="600" height="auto">
                 <div class="portfolio-details">
-                    <h4>{{ item.title }}</h4>
+                    <h3>{{ item.title }}</h3>
                     <p>{{ item.description }}</p>
-                    <a href="{{ item.url }}" target="_blank">{{ item.url }}</a>
+                    <a href="{{ item.url }}" name="Visit the website of {{ item.title }}" aria-label="Visit the website of {{ item.title }}" target="_blank">{{ item.url }}</a>
                     <p class="tags">{{ item.tags | join(" - ") }}</p>            
                 </div>
             </div>

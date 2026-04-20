@@ -10,9 +10,9 @@ permalink: "/work/"
       <div class="portfolio-item">
           <img src="{{ item.images.desktop }}" alt="{{ item.title }}">
           <div class="portfolio-details">
-            <h4>{{ item.title }}</h4>
+            <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
-            <a href="{{ item.url }}" target="_blank">{{ item.url }}</a>
+            <a href="{{ item.url }}" name="Visit the website of {{ item.title }}" aria-label="Visit the website of {{ item.title }}" target="_blank">{{ item.url }}</a>
             <p class="tags">{{ item.tags | join(" - ") }}</p>            
           </div>
       </div>

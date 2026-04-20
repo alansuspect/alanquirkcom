@@ -6,14 +6,15 @@ title: Alan Quirk Design
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alan Quirk - Web design &amp; development for your business, store or community.">
 
     <link href="/light-mode-favicon.png" rel="icon" media="(prefers-color-scheme: light)">
     <link href="/dark-mode-favicon.png" rel="icon" media="(prefers-color-scheme: dark)">
 
     <title>{{ title }}</title>
 
-    <link rel="stylesheet" href="/css/grid.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/grid.css" rel="preconnect">
+    <link rel="stylesheet" href="/css/style.css" rel="preconnect">
     
     <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->    
   </head>
@@ -22,19 +23,19 @@ title: Alan Quirk Design
         <nav>
             <div class="container">
                 <div class="logo">
-                    <a href="/">
+                    <a href="/" name="Go to homepage" aria-label="Go to homepage">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="91px" height="81px" viewBox="0 0 91 81">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <path d="M38.453125,57.2695312 L39.8691406,53.7539062 L51.8808594,53.7539062 L53.296875,57.2695312 L38.453125,57.2695312 Z M35.71875,64.3007812 L37.0859375,60.7851562 L54.6152344,60.7851562 L56.1289062,64.3007812 L35.71875,64.3007812 Z M32.984375,71.3320312 L34.3515625,67.8164062 L57.3984375,67.8164062 L58.8632812,71.3320312 L32.984375,71.3320312 Z M4.41992188,81 L0.611328125,81 L32.59375,0.140625 L36.4023438,0.140625 L68.3359375,81 L64.5761719,81 L34.4980469,4.87695312 L4.41992188,81 Z M34.9375,13.2265625 L36.9394531,17.71875 L11.9394531,81 L8.1796875,81 L34.9375,13.2265625 Z M38.84375,22.5039062 L40.6992188,27.3378906 L19.5566406,81 L15.7480469,81 L38.84375,22.5039062 Z M42.5546875,32.171875 L44.4101562,37.1035156 L27.0761719,81 L23.3164062,81 L42.5546875,32.171875 Z M91.0410156,81 L87.2324219,81 L55.2988281,0.140625 L59.0585938,0.140625 L91.0410156,81 Z M51.4902344,0.140625 L83.4726562,81 L79.7128906,81 L47.7304688,0.140625 L51.4902344,0.140625 Z M43.921875,0.140625 L75.9042969,81 L72.0957031,81 L40.1621094,0.140625 L43.921875,0.140625 Z" id="A" fill=""></path>
                             </g>
                         </svg>
                     </a>
-                    <a href="/"><span>{{ title }}</span></a>
+                    <a href="/" name="Go to homepage" aria-label="Go to homepage"><span>{{ title }}</span></a>
                 </div>
                 <ul class="nav-links">
-                <li><a href="/#services">Services</a></li>
-                <li><a href="/work">Work</a></li>
-                <li><a href="/#contact">Contact</a></li>
+                <li><a href="/#services" name="See the services I offer" aria-label="See the services I offer">Services</a></li>
+                <li><a href="/work" name="See examples of my work" aria-label="See examples of my work">Work</a></li>
+                <li><a href="/#contact" name="Contact me for web development work" aria-label="Contact me for web development work">Contact</a></li>
                 </ul>
             </div>
         </nav>    
@@ -48,14 +49,14 @@ title: Alan Quirk Design
                 <p>Copyright &copy; 2011 - {{ "now" | currentYear }} Alan Quirk Design</p>
                 <ul class="nav">
                     <li class="nav-item">
-                        <a href="https://aus.social/@alansuspect" rel="me" target="_blank">
+                        <a href="https://aus.social/@alansuspect" rel="me" target="_blank" name="Link to my Mastodon profile" aria-label="Link to my Mastodon profile">
                             <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <path d="M433 179.1c0-97.2-63.7-125.7-63.7-125.7-62.5-28.7-228.6-28.4-290.5 0 0 0-63.7 28.5-63.7 125.7 0 115.7-6.6 259.4 105.6 289.1 40.5 10.7 75.3 13 103.3 11.4 50.8-2.8 79.3-18.1 79.3-18.1l-1.7-36.9s-36.3 11.4-77.1 10.1c-40.4-1.4-83-4.4-89.6-54a102.5 102.5 0 0 1 -.9-13.9c85.6 20.9 158.7 9.1 178.8 6.7 56.1-6.7 105-41.3 111.2-72.9 9.8-49.8 9-121.5 9-121.5zm-75.1 125.2h-46.6v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.3V197c0-58.5-64-56.6-64-6.9v114.2H90.2c0-122.1-5.2-147.9 18.4-175 25.9-28.9 79.8-30.8 103.8 6.1l11.6 19.5 11.6-19.5c24.1-37.1 78.1-34.8 103.8-6.1 23.7 27.3 18.4 53 18.4 175z"/>
                             </svg>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://github.com/alansuspect" target="_blank">
+                        <a href="https://github.com/alansuspect" target="_blank" name="Link to my GitHub profile" aria-label="Link to my GitHub profile">
                             <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 496 512">
                                 <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
                             </svg>		
