@@ -98,7 +98,7 @@ layout: base.njk
         <h2>Get in touch</h2>
         <p>Have a project in mind or need help with an existing site? Send me a message and I'll get back to you promptly.</p>
     </div>       
-    <form class="contact-form" onsubmit="handleSubmit(event)">
+    <form class="contact-form" name="contact" method="POST" action="/thankyou/" netlify>
       <div class="field-row">
         <div class="field">
           <label for="name">Name</label>
