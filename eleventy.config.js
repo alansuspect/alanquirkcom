@@ -1,8 +1,11 @@
 import pluginFilters from "./_config/filters.js";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+
 
 export default async function(eleventyConfig) {
 
 	eleventyConfig.addPlugin(pluginFilters);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin); 
 
 	eleventyConfig
 		.addPassthroughCopy({

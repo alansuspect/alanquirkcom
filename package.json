@@ -12,6 +12,7 @@
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "4.0.0-alpha.7",
+    "@11ty/eleventy-img": "^6.0.4",
     "luxon": "^3.7.2"
   }
 }
