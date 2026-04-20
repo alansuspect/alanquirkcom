@@ -78,26 +78,29 @@ layout: base.njk
       <div class="field-row">
         <div class="field">
           <label for="name">Name</label>
-          <input type="text" id="name" required>
+          <input type="text" id="name" name="name" required>
         </div>
         <div class="field">
           <label for="email">Email</label>
-          <input type="email" id="email" required>
+          <input type="email" id="email" name="email" required>
         </div>
       </div>
       <div class="field">
         <label for="service">Service</label>
-        <select id="service">
-          <option value="">Select…</option>
-          <option>WordPress</option>
-          <option>Shopify</option>
-          <option>Eleventy</option>
-          <option>Not sure yet</option>
+        <select id="service" name="service">
+          <option value="" placeholder>Select…</option>
+          <option value="wordpress">WordPress</option>
+          <option value="shopify">Shopify</option>
+          <option value="static">Static Website</option>
+          <option value="design">Design</option>
+          <option value="hosting">Hosting</option>
+          <option value="support">Maintenance and Support</option>          
+          <option value="other">Not sure yet / Need assistance</option>
         </select>
       </div>
       <div class="field">
         <label for="message">Message</label>
-        <textarea id="message" required></textarea>
+        <textarea id="message" name="message" required></textarea>
       </div>
       <button type="submit" class="btn btn-filled" id="submit-btn">Send message</button>
     </form>
