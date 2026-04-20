@@ -192,6 +192,7 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+  max-height: max-content;
 }
 
 .hidden {

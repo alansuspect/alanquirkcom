@@ -79,7 +79,7 @@ layout: base.njk
     <div class="portfolio-grid">
         {% for item in portfolio | limit(3) %}
             <div class="portfolio-item">
-                <img src="{{ item.images.desktop }}" alt="{{ item.title }}">
+                <img src="{{ item.images.desktop }}" alt="{{ item.title }}" width="600" height="auto">
                 <div class="portfolio-details">
                     <h4>{{ item.title }}</h4>
                     <p>{{ item.description }}</p>
