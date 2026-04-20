@@ -8,7 +8,8 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     extensions: "html",
     formats: ["webp"],
-    widths: [361, 600, "auto"],
+    widths: [361, 600],
+    sharpWebpOptions: { quality: 75 },
     defaultAttributes: {
       loading: "lazy",
       decoding: "async",
