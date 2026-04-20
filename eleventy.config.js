@@ -5,7 +5,16 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 export default async function(eleventyConfig) {
 
 	eleventyConfig.addPlugin(pluginFilters);
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin); 
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    extensions: "html",
+    formats: ["webp"],
+    widths: [361, 600, "auto"],
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async",
+      sizes: "(max-width: 768px) 361px, 600px"
+    }
+  });
 
 	eleventyConfig
 		.addPassthroughCopy({

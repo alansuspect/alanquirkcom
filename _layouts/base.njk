@@ -13,8 +13,29 @@ title: Alan Quirk Design
 
     <title>{{ title }}</title>
 
-    <link rel="stylesheet" href="/css/grid.css" rel="preconnect">
-    <link rel="stylesheet" href="/css/style.css" rel="preconnect">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["Person", "ProfessionalService"],
+        "url": "https://www.alanquirk.com",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.alanquirk.com/img/logo.png"
+        },
+        "name": "Alan Quirk Design",
+        "description": "Alan Quirk - Web design & development for your business, store or community.",
+        "email": "mail@alanquirk.com",
+        "sameAs": [
+            "https://aus.social/@alansuspect",
+            "https://github.com/alansuspect"
+        ]
+    }
+    </script>  
+
+    {% set css %} {% include "inline.css" %} {% endset %}
+    <style>
+        {{ css | cssmin | safe }}
+    </style>    
     
     <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->    
   </head>
@@ -67,36 +88,36 @@ title: Alan Quirk Design
             <button id="theme-toggle" aria-label="Toggle dark mode"></button>
         </div>
     </footer>
-<script>
-    const moonIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+    <script>
+        const moonIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
 
-    const sunIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg>`;
+        const sunIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg>`;
 
-    const toggle = document.getElementById('theme-toggle');
-    const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+        const toggle = document.getElementById('theme-toggle');
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-    function applyTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        toggle.innerHTML = theme === 'dark' ? sunIcon : moonIcon;
-    }
-
-    // Use localStorage if the user has made an explicit choice, otherwise follow the system
-    const saved = localStorage.getItem('theme');
-    applyTheme(saved ?? (systemDark.matches ? 'dark' : 'light'));
-
-    toggle.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('data-theme');
-        const next = current === 'dark' ? 'light' : 'dark';
-        localStorage.setItem('theme', next);
-        applyTheme(next);
-    });
-
-    // If the system preference changes and the user hasn't set a manual preference, follow it
-    systemDark.addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {
-            applyTheme(e.matches ? 'dark' : 'light');
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            toggle.innerHTML = theme === 'dark' ? sunIcon : moonIcon;
         }
-    });
-</script>
+
+        // Use localStorage if the user has made an explicit choice, otherwise follow the system
+        const saved = localStorage.getItem('theme');
+        applyTheme(saved ?? (systemDark.matches ? 'dark' : 'light'));
+
+        toggle.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', next);
+            applyTheme(next);
+        });
+
+        // If the system preference changes and the user hasn't set a manual preference, follow it
+        systemDark.addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                applyTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    </script>
   </body>
 </html>
