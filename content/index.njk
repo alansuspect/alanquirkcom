@@ -98,7 +98,17 @@ layout: base.njk
         <h2>Get in touch</h2>
         <p>Have a project in mind or need help with an existing site? Send me a message and I'll get back to you promptly.</p>
     </div>       
-    <form class="contact-form" name="contact" method="POST" action="/thankyou/" netlify>
+    <form 
+      class="contact-form" 
+      name="contact" 
+      method="POST" 
+      action="/thankyou/" 
+      netlify-honeypot="bot-field" 
+      data-netlify-recaptcha="true"
+      netlify>
+      <p class="hidden">
+        <label>Don't fill this out if you're human: <input name="bot-field" type="text" /></label>
+      </p>      
       <div class="field-row">
         <div class="field">
           <label for="name">Name</label>
@@ -126,6 +136,7 @@ layout: base.njk
         <label for="message">Message</label>
         <textarea id="message" name="message" required></textarea>
       </div>
+      <div data-netlify-recaptcha="true"></div>
       <button type="submit" class="btn btn-filled" id="submit-btn">Send message</button>
     </form>
   </div>
