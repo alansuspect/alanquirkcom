@@ -1,0 +1,3 @@
+# Netlify redirects
+
+/portfolio    /work    301
