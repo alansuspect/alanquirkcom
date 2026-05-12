@@ -1,5 +1,15 @@
 [
   {
+    "title": "Li.Pxl",
+    "description": "Gallery store for Liadi Balogun, a UK-based fine art photographer.",
+    "url": "https://lipxl.com",
+    "tags": ["Shopify", "Design", "Theme Customisation", "App Integration"],
+    "images": {
+      "desktop": "/media/lipxl_com_collections_work_43717c826b5c.webp",
+      "mobile": ""
+    }
+  }, 
+  {
     "title": "Glide Magazine",
     "description": "A faster, modern rebuild for this magazine website featuring breaking music news and reviews, curated latest must-hear releases and intimate interviews.",
     "url": "https://glidemagazine.com",
